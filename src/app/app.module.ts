@@ -13,8 +13,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EntityComponent } from './entity/entity.component'
 
+const appRoutes : Routes = [
+  {path:'',component:HomeComponent},
+  {path:'entiry',component:EntityComponent},
+  {path:'home',component:HomeComponent}
+];
+
 @NgModule({
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, AppRoutingModule,
+   RouterModule.forRoot(appRoutes,{ enableTracing: true } )
+   ],
   declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent],
   bootstrap: [AppComponent]
 })
