@@ -4,4 +4,24 @@ p {
 
 .inline-block-child {
   display: inline-block;
+  height: 70%;
+  width: 50%;
+}
+
+.inline-block-ltmenu {
+  display: inline-block;
+  height: 70%;
+  width: 25%;
+}
+
+.inline-block-rtmenu {
+  display: inline-block;
+  height: 70%;
+  width: 30%;
+}
+
+.inline-block-content {
+  display: inline-block;
+  height: 70%;
+  width: 45%;
 }

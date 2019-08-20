@@ -1,13 +1,13 @@
 <app-header></app-header>
 
 <div class='parent'>
-	<div class='child inline-block-child'>
-		<button routerLink='/home'>Home</button><br>
+	<div class='child inline-block-ltmenu'>
+		<button routerLink='/home' >Home</button><br>
     <button routerLink='/entity'>Entiry</button></div>
-  <div class='child inline-block-child'>
-    <router-outlet></router-outlet>
+  <div class='child inline-block-content'>
+    <router-outlet ></router-outlet>
      </div>
-  <div class='child inline-block-child'> <app-rtmenu></app-rtmenu></div>
+  <div class='child inline-block-rtmenu'> <router-outlet name="rightmenu"></router-outlet></div>
 </div>
 
 <app-footer></app-footer>
