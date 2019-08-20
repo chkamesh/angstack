@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LtmenuComponent } from './ltmenu/ltmenu.component';
 import { RtmenuComponent } from './rtmenu/rtmenu.component';
+import {AppRoutingModule} from './app-routing/app-routing.module';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
