@@ -8,11 +8,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { LtmenuComponent } from './ltmenu/ltmenu.component';
 import { RtmenuComponent } from './rtmenu/rtmenu.component';
-import {AppRoutingModule} from './app-routing/app-routing.module';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { EntityComponent } from './entity/entity.component'
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent ],
-  bootstrap:    [ AppComponent ]
+  imports: [BrowserModule, FormsModule],
+  declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
