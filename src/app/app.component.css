@@ -1,3 +1,7 @@
 p {
   font-family: Lato;
 }
+
+.inline-block-child {
+  display: inline-block;
+}
