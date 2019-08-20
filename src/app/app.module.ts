@@ -15,7 +15,7 @@ import { EntityComponent } from './entity/entity.component'
 
 const appRoutes: Routes = [
   { path: '', component: RtmenuComponent, outlet: 'rightmenu' },
-  { path: 'entity', component: EntityComponent },
+  { path: 'entity', component: EntityComponent ,data:{'gi':'dd'}},
   {
     path: 'home', component: HomeComponent,
   }
