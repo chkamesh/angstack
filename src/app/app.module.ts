@@ -10,7 +10,7 @@ import { LtmenuComponent } from './ltmenu/ltmenu.component';
 import { RtmenuComponent } from './rtmenu/rtmenu.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
+import { HomeComponent } from './components/home/home.component';
 import { EntityComponent } from './entity/entity.component';
 import { ErrorComponent } from './error/error.component';
 
