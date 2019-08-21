@@ -11,21 +11,23 @@ import { RtmenuComponent } from './rtmenu/rtmenu.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { EntityComponent } from './entity/entity.component'
+import { EntityComponent } from './entity/entity.component';
+import { ErrorComponent } from './error/error.component'
 
 const appRoutes: Routes = [
   { path: '', component: RtmenuComponent, outlet: 'rightmenu' },
-  { path: 'entity', component: EntityComponent ,data:{'gi':'dd'}},
+  { path: 'entity', component: EntityComponent, data: { 'gi': 'dd' } },
   {
     path: 'home', component: HomeComponent,
-  }
+  },
+  { path: '**', component: ErrorComponent }
 ];
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent],
+  declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
