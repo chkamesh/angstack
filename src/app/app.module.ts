@@ -11,7 +11,7 @@ import { RtmenuComponent } from './rtmenu/rtmenu.component';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
-import { EntityComponent } from './entity/entity.component';
+import { EntityComponent } from './components/entity/entity.component';
 import { ErrorComponent } from './error/error.component';
 
 const appRoutes: Routes = [
