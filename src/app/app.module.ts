@@ -13,6 +13,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { EntityComponent } from './components/entity/entity.component';
 import { ErrorComponent } from './components/error/error.component';
+import { EntityService } from './services/entity.service';
+import { SampleDirective } from './directives/sample.directive';
+import { SamplePipe } from './pipes/sample.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: RtmenuComponent, outlet: 'rightmenu' },
@@ -27,7 +30,8 @@ const appRoutes: Routes = [
   imports: [BrowserModule, FormsModule, AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent, SampleDirective, SamplePipe],
+  bootstrap: [AppComponent],
+  providers: [EntityService]
 })
 export class AppModule { }
