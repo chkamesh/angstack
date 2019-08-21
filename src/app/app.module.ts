@@ -17,6 +17,7 @@ import { EntityService } from './services/entity.service';
 import { SampleDirective } from './directives/sample.directive';
 import { SamplePipe } from './pipes/sample.pipe';
 
+import {ReactiveFormsModule, FormGroup} from '@angular/forms';
 const appRoutes: Routes = [
   { path: '', component: RtmenuComponent, outlet: 'rightmenu' },
   { path: 'entity', component: EntityComponent, data: { 'gi': 'dd' } },
@@ -27,7 +28,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule,
+  imports: [BrowserModule, FormsModule, AppRoutingModule,ReactiveFormsModule,
     RouterModule.forRoot(appRoutes)
   ],
   declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent, SampleDirective, SamplePipe],

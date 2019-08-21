@@ -1,4 +1,10 @@
-<p>
-  <input type="text" [(ngModel)]='name'>
-  <button (click)="save()">Save</button>
-</p>
+<form [formGroup]="profileForm">
+	<input type="text" formControlName="entityName">
+  <input type="text" formControlName="entityDesc">
+  
+</form>
+<button (click)="save()">Save</button>
+
+
+<br><br><br>
+::{{ profileForm.value | json }}<br>
