@@ -16,10 +16,10 @@ export class HomeComponent implements OnInit {
   public save() {
     console.log(this.name+""+this.route.url);
    // this.router.navigateByUrl('/entity',{ state: { hello: 'world' } });
-  
-    this.router.navigate(['/entity','entid10'])   //path params  =>/entity/entid10  
+   //this.router.navigate(['/entity','entid10','gh'])   //path params  =>/entity/entid10  
    // this.router.navigate(['/entity',{entid:'20'}])   //matrix params  =>/entity;entid=20
-    //this.router.navigate(['/entity'],{queryParams:{entid:'40'}}); //queery parms   =>  entity?entid=20
+  //this.router.navigate(['/entity'],{queryParams:{entid:'40'}}); //queery parms   =>  entity?entid=20
+    this.router.navigateByUrl('/entity') //to specific url
   }
 
 }
