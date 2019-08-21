@@ -12,7 +12,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { EntityComponent } from './entity/entity.component';
-import { ErrorComponent } from './error/error.component'
+import { ErrorComponent } from './error/error.component';
+import { ErroorComponent } from './components/erroor/erroor.component'
 
 const appRoutes: Routes = [
   { path: '', component: RtmenuComponent, outlet: 'rightmenu' },
@@ -27,7 +28,7 @@ const appRoutes: Routes = [
   imports: [BrowserModule, FormsModule, AppRoutingModule,
     RouterModule.forRoot(appRoutes)
   ],
-  declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent],
+  declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent, ErroorComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
