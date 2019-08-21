@@ -1,7 +1,9 @@
 <form [formGroup]="profileForm">
 	<input type="text" formControlName="entityName">
   <input type="text" formControlName="entityDesc">
-  
+  <div formGroupName="entitySubDetails">
+    <input type="text" formControlName="entityHasUnique">
+  </div>
 </form>
 <button (click)="save()">Save</button>
 
