@@ -10,7 +10,12 @@ const appRoutes: Routes = [
     path: 'entity', component: EntityComponent, data: { 'gi': 'dd' },
     children: [
       { path: 'entityDetail', component: EntityDetailsComponent },
-      { path: 'entityList', component: EntityListComponent }]
+      { path: 'entityList', component: EntityListComponent },
+      {
+        path: '**',
+	      redirectTo: 'entityDetail',
+	      pathMatch: 'full'
+	    }]
   },
 
 ];
