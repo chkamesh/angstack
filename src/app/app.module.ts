@@ -31,7 +31,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [BrowserModule, FormsModule, AppRoutingModule,ReactiveFormsModule,
-    RouterModule.forChild(appRoutes)
+    RouterModule.forRoot(appRoutes)
   ],
   declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent, SampleDirective, SamplePipe, EntityDetailsComponent, EntityListComponent],
   bootstrap: [AppComponent],
