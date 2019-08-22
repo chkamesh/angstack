@@ -17,12 +17,17 @@ import { EntityService } from './services/entity.service';
 import { SampleDirective } from './directives/sample.directive';
 import { SamplePipe } from './pipes/sample.pipe';
 
-import {ReactiveFormsModule, FormGroup} from '@angular/forms';
+import { ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { EntityDetailsComponent } from './components/entity/entity-details/entity-details.component';
 import { EntityListComponent } from './components/entity/entity-list/entity-list.component';
+import { EntityRoutingModule } from './components/entity/entity-routing/entity-routing.module';
+
+
 const appRoutes: Routes = [
   { path: '', component: RtmenuComponent, outlet: 'rightmenu' },
-  { path: 'entity', component: EntityComponent, data: { 'gi': 'dd' } },
+  {
+    path: 'entity', component: EntityComponent, data: { 'gi': 'dd' }
+  },
   {
     path: 'home', component: HomeComponent,
   },
@@ -30,8 +35,8 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule,ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule,
+    EntityRoutingModule,RouterModule.forRoot(appRoutes)
   ],
   declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent, SampleDirective, SamplePipe, EntityDetailsComponent, EntityListComponent],
   bootstrap: [AppComponent],

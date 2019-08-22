@@ -1,16 +1,23 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router'
-import { EntityDetailsComponent } from '../entity-details/entity-details.component'
-import { EntityListComponent } from '../entity-list/entity-list.component'
+import { RouterModule, Routes } from '@angular/router';
+import { EntityDetailsComponent } from '../entity-details/entity-details.component';
 
-const entityRoutes: Routes = [
-  { path: '/entityDetail', component: EntityDetailsComponent },
-  { path: '/entityList', component: EntityListComponent }
+import { EntityComponent } from '../entity.component';
+import { EntityListComponent } from '../entity-list/entity-list.component';
+const appRoutes: Routes = [
+  {
+    path: 'entity', component: EntityComponent, data: { 'gi': 'dd' },
+    children: [
+      { path: 'entityDetail', component: EntityDetailsComponent },
+      { path: 'entityList', component: EntityListComponent }]
+  },
+
 ];
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule.forChild(appRoutes)
   ],
   declarations: []
 })
