@@ -12,7 +12,7 @@ const appRoutes: Routes = [
       { path: 'entityDetail', component: EntityDetailsComponent },
       { path: 'entityList', component: EntityListComponent ,pathMatch:'full'},
       { path: 'redirectMe', redirectTo: 'entityDetail', pathMatch: 'full' },
-      { path: 'redirect', redirectTo: 'entityDetail', pathMatch: 'ful' }
+      { path: 'redirect', redirectTo: 'entityDetail', pathMatch: 'full' }
      /* {
         path: '**',
 	      redirectTo: 'entityDetail',
