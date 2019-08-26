@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class EntityService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
 
   public 
 
