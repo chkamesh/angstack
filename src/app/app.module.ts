@@ -21,6 +21,7 @@ import { ReactiveFormsModule, FormGroup } from '@angular/forms';
 import { EntityDetailsComponent } from './components/entity/entity-details/entity-details.component';
 import { EntityListComponent } from './components/entity/entity-list/entity-list.component';
 import { EntityRoutingModule } from './components/entity/entity-routing/entity-routing.module';
+import { HttpClient } from '@angular/common/http';
 
 
 const appRoutes: Routes = [
@@ -35,8 +36,8 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule,
-    EntityRoutingModule,RouterModule.forRoot(appRoutes)
+  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, HttpClient,
+    EntityRoutingModule, RouterModule.forRoot(appRoutes)
   ],
   declarations: [AppComponent, HelloComponent, HeaderComponent, FooterComponent, LtmenuComponent, RtmenuComponent, HomeComponent, EntityComponent, ErrorComponent, SampleDirective, SamplePipe, EntityDetailsComponent, EntityListComponent],
   bootstrap: [AppComponent],

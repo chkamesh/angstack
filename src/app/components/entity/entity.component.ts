@@ -16,6 +16,8 @@ export class EntityComponent implements OnInit {
     this.route
       .data
       .subscribe(v => console.log(v));
+
+      
   }
 
 }
